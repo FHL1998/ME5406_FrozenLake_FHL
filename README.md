@@ -65,7 +65,11 @@ if you want to use GUI, you must modify the code in `Q_learning.py`, `SARSA.py`,
     ```
 ## Results Demonstration
 Here, some of the results will be illustrated below, especially for `OVERALL_TASK = 'Tuning Q Learning'` and `OVERALL_TASK = 'Tuning SARSA'`. The overall results can be found in `results`. For the interpretation you can refer to the **Report**.
-## Tuning Q Learning
+### Tuning Q Learning
+#### Tuning Learning Rate 
+<div align=center>
+<img src="results/Q_Learning/tuning/discount_rate/average_award.png" width="150" ><img src="results/Q_Learning/tuning/discount_rate/success_rate.png" width="150"/>
+</div>
 
         
       
