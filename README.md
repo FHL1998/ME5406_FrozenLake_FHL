@@ -141,4 +141,4 @@ The frozen lake problem is simple, yet it is extremely useful in understanding R
 
 In addition to completing the project1, I also experimented with another GUI, which is implemented using [**web app**](https://share.streamlit.io/fanielts8/frozen_lake_web/main/app.py).
 
-Finally, I'd want to express my heartfelt gratitude to Professor Peter for teaching me approaches and abilities in ME5406. Your collection notes are informative, vivid, concise and clear, particularly the practical problem of the cliff walking, which helps me grasp the difference and link between SARSA and Q Learning, as well as the idea of DRL.
+Finally, I'd want to express my heartfelt gratitude to [Professor CHEN Chao Yu, Peter](https://www.eng.nus.edu.sg/me/staff/chen-chao-yu-peter/) for teaching me approaches and abilities in ME5406. Your collection notes are informative, vivid, concise and clear, particularly the practical problem of the cliff walking, which helps me grasp the difference and link between SARSA and Q Learning, as well as the idea of DRL.
