@@ -77,7 +77,7 @@ class Q_Learning(object):
             q value: q value in a given state and action
         """
 
-        # Checking if the next step exists in the Q-table
+        # Checking if the next step already exists in the Q-table
         self.check_state_validation(next_state)
 
         # Calculate the q target value(estimated target value) according to update rules

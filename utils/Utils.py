@@ -15,13 +15,13 @@ def calculate_standard_deviation_Q_Learning(Q_Value_Per_Episodes, Q_Table, Q_Val
     global standard_deviation
     # for map with size of 4, calculate start from 100th episode and every 10 episodes.
     if GRID_SIZE == 4:
-        if i >= 100 and i % 10 == 0:
+        if i >= 200 and i % 10 == 0:
             Q_Value_Per_Episodes[i] = []
             for j in range(ACTIONS_NUMBER):
                 Q_Value_Per_Episodes[i].append(Q_Table.loc[str(14), j])
     # for map with size of 10, calculate start from 1200th episode and every 20 episodes.
     elif GRID_SIZE == 10:
-        if i >= 1200 and i % 20 == 0:
+        if i >= 1000 and i % 20 == 0:
             Q_Value_Per_Episodes[i] = []
             for j in range(ACTIONS_NUMBER):
                 if not Q_Table.loc[str(98), j] is None:
@@ -48,12 +48,12 @@ def calculate_standard_deviation(Q_Value_Per_Episodes, Q_Table_Reindex, Q_Value_
     global standard_deviation
     Q_Table_Dataframe = pd.DataFrame.from_dict(Q_Table_Reindex, orient='index', columns=['0', '1', '2', '3'])
     if GRID_SIZE == 4:
-        if i >= 100 and i % 10 == 0:
+        if i >= 200 and i % 10 == 0:
             Q_Value_Per_Episodes[i] = []
             for j in range(ACTIONS_NUMBER):
                 Q_Value_Per_Episodes[i].append(Q_Table_Dataframe.iloc[14, j])
     elif GRID_SIZE == 10:
-        if i >= 700 and i % 20 == 0:
+        if i >= 1000 and i % 20 == 0:
             Q_Value_Per_Episodes[i] = []
             for j in range(ACTIONS_NUMBER):
                 if not Q_Table_Dataframe.iloc[98, j] is None:

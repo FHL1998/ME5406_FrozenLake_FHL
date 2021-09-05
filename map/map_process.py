@@ -68,7 +68,9 @@ def plot_matrix():
     plt.gca().xaxis.set_major_locator(MultipleLocator(1))
     plt.gca().yaxis.set_major_locator(MultipleLocator(1))
     plt.pcolor(map_matrix, cmap=color_map, edgecolors='k', linewidths=3)
-    plt.savefig('map_10x10.png', bbox_inches='tight', pad_inches=0)  # 列表各元素倒序输出
+
+    # The file name must be changed into 'map_4x4.png' if you use 'map_4x4.txt'
+    plt.savefig('map_10x10.png', bbox_inches='tight', pad_inches=0)  # List each element in reverse order output.
     plt.show()
 
 

@@ -38,6 +38,9 @@ LAMBDA = 0.9
 # Figure plot relative parameters
 # SMOOTH_SIZE reveals the window size in the moving average method to smooth the figure
 SMOOTH_SIZE = 10
-# TASK_LIST is the list involved in the 3 tasks, and TASK is the current task
-TASK_LIST = ['Tuning Learning Rate', 'Tuning Discount Rate', 'Tuning Greedy Policy']
+# TUNING_TASK_LIST is the list involved in the 3 tasks, and TASK is the current task
+TUNING_TASK_LIST = ['Tuning Learning Rate', 'Tuning Discount Rate', 'Tuning Greedy Policy']
 TASK = 'Tuning Greedy Policy'
+
+OVERALL_TASK_LIST = ['Run Three Methods', 'Compare Three Methods', 'Tuning Q Learning', 'Tuning SARSA']
+OVERALL_TASK = 'Tuning Q Learning'
