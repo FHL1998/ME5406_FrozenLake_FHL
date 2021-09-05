@@ -101,5 +101,20 @@ Here, some of the results will be illustrated below, especially for `OVERALL_TAS
 </div>
 
 
+## GUI Implementation Result
+The resluts achieved by using Q Learning in Tkinter is illustrated as below:
+<div align=center>
+   <img src="results/Run_All/Q_Learning.gif" width="300" >
+</div>
 
+The resluts achieved by using SARSA in Tkinter is illustrated as below:
+<div align=center>
+   <img src="results/Run_All/SARSA.gif" width="300"/>
+</div>
 
+## Project Iteration & Acknowledgement
+The frozen lake problem is simple, yet it is extremely useful in understanding Reinforcement Learning's essential concept. This is an meaningful project, and I gain some assistance like GUI implementation(Tkinter) from Morvan Zhou, the ideal of using heat map from Github.
+
+In addition to completing the project1, I also experimented with another GUI, which is implemented using [**web app**](https://share.streamlit.io/fanielts8/frozen_lake_web/main/app.py).
+
+Finally, I'd want to express my heartfelt gratitude to Professor Peter for teaching me approaches and abilities in ME5406. Your collection notes are informative, vivid, concise and clear, particularly the practical problem of the cliff walking, which helps me grasp the difference and link between SARSA and Q Learning, as well as the idea of DRL.
