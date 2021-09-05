@@ -102,18 +102,18 @@ Here, some of the results will be illustrated below, especially for `OVERALL_TAS
 
 
 ## GUI Implementation Result
-The resluts achieved by using Q Learning in Tkinter is illustrated as below:
+The resluts achieved by using Q Learning in 10✖10 map is illustrated as below:
 <div align=center>
    <img src="results/Run_All/Q_Learning.gif" width="300" >
 </div>
 
-The resluts achieved by using SARSA in Tkinter is illustrated as below:
+The resluts achieved by using SARSA in 10✖10 map is illustrated as below:
 <div align=center>
    <img src="results/Run_All/SARSA.gif" width="300"/>
 </div>
 
 ## Project Iteration & Acknowledgement
-The frozen lake problem is simple, yet it is extremely useful in understanding Reinforcement Learning's essential concept. This is an meaningful project, and I gain some assistance like GUI implementation(Tkinter) from Morvan Zhou, the ideal of using heat map from Github.
+The frozen lake problem is simple, yet it is extremely useful in understanding Reinforcement Learning's essential concept. This is an meaningful project, and I gain some assistance like GUI implementation(Tkinter) from [Morvan Zhou](https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow).
 
 In addition to completing the project1, I also experimented with another GUI, which is implemented using [**web app**](https://share.streamlit.io/fanielts8/frozen_lake_web/main/app.py).
 
