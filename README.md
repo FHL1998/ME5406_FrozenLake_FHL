@@ -83,14 +83,14 @@ For the detailed interpretation of the hyper parametes:
 For *learning rate*, according to the results, the optimal one could be **0.1**, as higher average rewards, higher success rate, relative fast convergence(judged by MSE value) it achieved.
 
 <div align=center>
-<img src="results/Q_Learning/tuning/learing_rate/average_award.jpg" width="280" ><img src="results/Q_Learning/tuning/learing_rate/success_rate.jpg" width="280"/><img src="results/Q_Learning/tuning/learing_rate/mse.jpg" width="280"/>
+<img src="results/Q_Learning/tuning/learing_rate/average_award.jpg" width="250" ><img src="results/Q_Learning/tuning/learing_rate/success_rate.jpg" width="250"/><img src="results/Q_Learning/tuning/learing_rate/mse.jpg" width="250"/>
 </div>
 
 #### Tuning Discount Rate in 10✖10 map
 For *discount rate*, according to the results, the optimal one could be **0.8**, as higher average rewards, higher success rate, relative early success episode it achieved.
 
 <div align=center>
-<img src="results/Q_Learning/tuning/discount_rate/average_award.jpg" width="280" ><img src="results/Q_Learning/tuning/discount_rate/success_rate.jpg" width="280"/><img src="results/Q_Learning/tuning/discount_rate/mse.jpg" width="280"/>
+<img src="results/Q_Learning/tuning/discount_rate/average_award.jpg" width="250" ><img src="results/Q_Learning/tuning/discount_rate/success_rate.jpg" width="250"/><img src="results/Q_Learning/tuning/discount_rate/mse.jpg" width="250"/>
 </div>
 
 #### Tuning Epsilon in 4✖4 map
@@ -98,7 +98,7 @@ For *epsilon*, in large scale map, a large epsilon will lead the Q Learning fail
 optimal choice among all epsilon values.
 
 <div align=center>
-<img src="results/Q_Learning/tuning/epsilon/average_award.jpg" width="280" ><img src="results/Q_Learning/tuning/epsilon/success_rate.jpg" width="280"/><img src="results/Q_Learning/tuning/epsilon/mse.jpg" width="280"/>
+<img src="results/Q_Learning/tuning/epsilon/average_award.jpg" width="250" ><img src="results/Q_Learning/tuning/epsilon/success_rate.jpg" width="250"/><img src="results/Q_Learning/tuning/epsilon/mse.jpg" width="250"/>
 </div>
         
 ### Tuning SARSA
@@ -107,21 +107,21 @@ optimal choice among all epsilon values.
 For *learning rate*, according to the results, the optimal one could be **0.05** or **0.01**, as higher average rewards, higher success rate, relative fast convergence(judged by MSE value) it achieved.
 
 <div align=center>
-<img src="results/SARSA/tuning/learning_rate/average_award.jpg" width="280" ><img src="results/SARSA/tuning/learning_rate/success_rate.jpg" width="280"/><img src="results/SARSA/tuning/learning_rate/mse.jpg" width="280"/>
+<img src="results/SARSA/tuning/learning_rate/average_award.jpg" width="250" ><img src="results/SARSA/tuning/learning_rate/success_rate.jpg" width="250"/><img src="results/SARSA/tuning/learning_rate/mse.jpg" width="250"/>
 </div>
 
 #### Tuning Discount Rate in 10✖10 map
 For *discount rate*, although SARSA achieved best performance at **1.0**, it seems unrealistic in practical scenario, thus it is usually selected about **0.9**.
 
 <div align=center>
-<img src="results/SARSA/tuning/discount_rate/average_award.jpg" width="280" ><img src="results/SARSA/tuning/discount_rate/success_rate.jpg" width="280"/><img src="results/SARSA/tuning/discount_rate/mse.jpg" width="280"/>
+<img src="results/SARSA/tuning/discount_rate/average_award.jpg" width="250" ><img src="results/SARSA/tuning/discount_rate/success_rate.jpg" width="250"/><img src="results/SARSA/tuning/discount_rate/mse.jpg" width="250"/>
 </div>
 
 #### Tuning Epsilon in 10✖10 map
 For *epsilon*, according to the results, the optimal epsilon value could be **0.1**, as highest average rewards, highest success rate, relative early success it achieved.
 
 <div align=center>
-<img src="results/SARSA/tuning/epsilon/average_award.jpg" width="280" ><img src="results/SARSA/tuning/epsilon/success_rate.jpg" width="280"/><img src="results/SARSA/tuning/epsilon/mse.jpg" width="280"/>
+<img src="results/SARSA/tuning/epsilon/average_award.jpg" width="250" ><img src="results/SARSA/tuning/epsilon/success_rate.jpg" width="250"/><img src="results/SARSA/tuning/epsilon/mse.jpg" width="250"/>
 </div>
 
 
