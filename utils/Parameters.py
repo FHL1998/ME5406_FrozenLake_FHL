@@ -2,8 +2,8 @@ from PIL import Image, ImageTk  # For adding images into the canvas widget
 from map.map_process import transfer_matrix_to_coordinate  # please refer to map_process for more details
 
 # Environment parameters
-MAP_NAME = 'map/map_4x4.txt'  # MAP_NAME could be selected within 'map/map_10x10.txt' and 'map/map_4x4.txt'
-MAP_SIZE = '4x4'  # MAP_SIZE used in plot, should in line with MAP_NAME, has options of '10x10' and '4x4'
+MAP_NAME = 'map/map_10x10.txt'  # MAP_NAME could be selected within 'map/map_10x10.txt' and 'map/map_4x4.txt'
+MAP_SIZE = '10x10'  # MAP_SIZE used in plot, should in line with MAP_NAME, has options of '10x10' and '4x4'
 GRID_SIZE, map_matrix, START, ICE_HOLE, FRISBEE, MASK = transfer_matrix_to_coordinate(MAP_NAME)
 PIXELS = 40
 x_start = START[0][0]
@@ -25,7 +25,7 @@ STATES_SPACE = ENV_HEIGHT * ENV_WIDTH  # (int): the total possible states in the
 # NUM_STEPS restrict the maximum steps for Monte Carlo Method in single episode
 NUM_STEPS = 150
 # NUM_EPISODES is the episodes that involved in training process
-NUM_EPISODES = 1000
+NUM_EPISODES = 3000
 # LEARNING_RATE is the hyper-parameter used in Q-Learning, SARSA and SARSA(lambda)
 LEARNING_RATE = 0.1
 # GAMMA is the hyper-parameter illustrate the discount rate of return
@@ -40,7 +40,7 @@ LAMBDA = 0.9
 SMOOTH_SIZE = 10
 # TUNING_TASK_LIST is the list involved in the 3 tasks, and TASK is the current task
 TUNING_TASK_LIST = ['Tuning Learning Rate', 'Tuning Discount Rate', 'Tuning Greedy Policy']
-TASK = 'Tuning Greedy Policy'
+TASK = 'Tuning Learning Rate'
 
 OVERALL_TASK_LIST = ['Run Three Methods', 'Compare Three Methods', 'Tuning Q Learning', 'Tuning SARSA']
 OVERALL_TASK = 'Tuning Q Learning'
