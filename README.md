@@ -72,21 +72,21 @@ Here, some of the results will be illustrated below, especially for `OVERALL_TAS
 For *learning rate*, according to the results, the optimal one could be **0.1**, as higher average rewards, higher success rate, relative fast convergence(judged by MSE value) it achieved.
 
 <div align=center>
-<img src="results/Q_Learning/tuning/learing_rate/average_award.jpg" width="300" ><img src="results/Q_Learning/tuning/learing_rate/success_rate.jpg" width="300"/><img src="results/Q_Learning/tuning/learing_rate/mse.jpg" width="300"/>
+<img src="results/Q_Learning/tuning/learing_rate/average_award.jpg" width="280" ><img src="results/Q_Learning/tuning/learing_rate/success_rate.jpg" width="280"/><img src="results/Q_Learning/tuning/learing_rate/mse.jpg" width="280"/>
 </div>
 
 #### Tuning Discount Rate in 10✖10 map
 For *discount rate*, according to the results, the optimal one could be **0.8**, as higher average rewards, higher success rate, relative early success episode it achieved.
 
 <div align=center>
-<img src="results/Q_Learning/tuning/discount_rate/average_award.jpg" width="300" ><img src="results/Q_Learning/tuning/discount_rate/success_rate.jpg" width="300"/><img src="results/Q_Learning/tuning/discount_rate/mse.jpg" width="300"/>
+<img src="results/Q_Learning/tuning/discount_rate/average_award.jpg" width="280" ><img src="results/Q_Learning/tuning/discount_rate/success_rate.jpg" width="280"/><img src="results/Q_Learning/tuning/discount_rate/mse.jpg" width="280"/>
 </div>
 
 #### Tuning Epsilon in 4✖4 map
 For *epsilon*, in large_scale, a large epsilon will lead the Q Learning fail frequently. According to the results, the optimal epsilon value could be **0.1**, as highest average rewards, highest success rate, relative early success it achieved.
 
 <div align=center>
-<img src="results/Q_Learning/tuning/epsilon/average_award.jpg" width="300" ><img src="results/Q_Learning/tuning/epsilon/success_rate.jpg" width="300"/><img src="results/Q_Learning/tuning/epsilon/mse.jpg" width="300"/>
+<img src="results/Q_Learning/tuning/epsilon/average_award.jpg" width="280" ><img src="results/Q_Learning/tuning/epsilon/success_rate.jpg" width="280"/><img src="results/Q_Learning/tuning/epsilon/mse.jpg" width="280"/>
 </div>
         
 ### Tuning SARSA
@@ -95,17 +95,17 @@ For *epsilon*, in large_scale, a large epsilon will lead the Q Learning fail fre
 For *learning rate*, according to the results, the optimal one could be **0.05**, as higher average rewards, higher success rate, relative fast convergence(judged by MSE value) it achieved.
 
 <div align=center>
-<img src="results/SARSA/tuning/learning_rate/average_award.jpg" width="300" ><img src="results/SARSA/tuning/learning_rate/success_rate.jpg" width="300"/><img src="results/SARSA/tuning/learning_rate/mse.jpg" width="300"/>
+<img src="results/SARSA/tuning/learning_rate/average_award.jpg" width="280" ><img src="results/SARSA/tuning/learning_rate/success_rate.jpg" width="280"/><img src="results/SARSA/tuning/learning_rate/mse.jpg" width="280"/>
 </div>
 
 #### Tuning Discount Rate in 10✖10 map
 <div align=center>
-<img src="results/SARSA/tuning/discount_rate/average_award.jpg" width="300" ><img src="results/SARSA/tuning/discount_rate/success_rate.jpg" width="300"/><img src="results/SARSA/tuning/discount_rate/mse.jpg" width="300"/>
+<img src="results/SARSA/tuning/discount_rate/average_award.jpg" width="280" ><img src="results/SARSA/tuning/discount_rate/success_rate.jpg" width="280"/><img src="results/SARSA/tuning/discount_rate/mse.jpg" width="280"/>
 </div>
 
 #### Tuning Epsilon in 10✖10 map
 <div align=center>
-<img src="results/SARSA/tuning/epsilon/average_award.jpg" width="300" ><img src="results/SARSA/tuning/epsilon/success_rate.jpg" width="300"/><img src="results/SARSA/tuning/epsilon/mse.jpg" width="300"/>
+<img src="results/SARSA/tuning/epsilon/average_award.jpg" width="280" ><img src="results/SARSA/tuning/epsilon/success_rate.jpg" width="280"/><img src="results/SARSA/tuning/epsilon/mse.jpg" width="280"/>
 </div>
 
 
