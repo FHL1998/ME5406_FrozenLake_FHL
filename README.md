@@ -64,8 +64,13 @@ if you want to use GUI, you must modify the code in `Q_learning.py`, `SARSA.py`,
     ```python
        python run.py
     ```
-## Results Demonstration
+## Hyper Parameters Tuning Results Demonstration
 Here, some of the results will be illustrated below, especially for `OVERALL_TASK = 'Tuning Q Learning'` and `OVERALL_TASK = 'Tuning SARSA'`. The overall results can be found in `results`. For the interpretation you can refer to the **Report** and `results`.
+For the detailed interpretation of the hyper parametes:
+- **Learning Rate(alpha)**: alpha is a metric that compares the outcomes of previous learning to the results of present learning. If the alpha is set too low, the agent will only be interested in prior information.
+- **Discount Rate(gamma)**: gamma is the attenuation value for future returns, which determines the importance of future returns. A factor near to one will motivate the agent to work hard in order to reap long-term high benefits.
+- **Greedy Policy(epsilon)**: epsilon is used to balance the relationship between exploration and exploitation in epsilon-greedy policy.
+
 ### Tuning Q Learning
 
 #### Tuning Learning Rate in 10✖10 map
