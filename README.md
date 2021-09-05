@@ -104,7 +104,7 @@ optimal choice among all epsilon values.
 ### Tuning SARSA
 
 #### Tuning Learning Rate in 10✖10 map
-For *learning rate*, according to the results, the optimal one could be **0.05**, as higher average rewards, higher success rate, relative fast convergence(judged by MSE value) it achieved.
+For *learning rate*, according to the results, the optimal one could be **0.05** or **0.01**, as higher average rewards, higher success rate, relative fast convergence(judged by MSE value) it achieved.
 
 <div align=center>
 <img src="results/SARSA/tuning/learning_rate/average_award.jpg" width="280" ><img src="results/SARSA/tuning/learning_rate/success_rate.jpg" width="280"/><img src="results/SARSA/tuning/learning_rate/mse.jpg" width="280"/>
