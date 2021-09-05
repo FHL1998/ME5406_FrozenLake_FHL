@@ -60,20 +60,45 @@ if you want to use GUI, you must modify the code in `Q_learning.py`, `SARSA.py`,
  ## Project Execution
  - **First**, you must change the TASK and OVERALL_TASK manually in `Parameters.py`
  - **Second**, run the entire project using the code:
+ 
     ```python
        python run.py
     ```
 ## Results Demonstration
 Here, some of the results will be illustrated below, especially for `OVERALL_TASK = 'Tuning Q Learning'` and `OVERALL_TASK = 'Tuning SARSA'`. The overall results can be found in `results`. For the interpretation you can refer to the **Report**.
 ### Tuning Q Learning
-#### Tuning Learning Rate 
+
+#### Tuning Learning Rate in 10✖10 map
 <div align=center>
-<img src="results/Q_Learning/tuning/discount_rate/average_award.png" width="150" ><img src="results/Q_Learning/tuning/discount_rate/success_rate.png" width="150"/>
+<img src="results/Q_Learning/tuning/learing_rate/average_award.jpg" width="320" ><img src="results/Q_Learning/tuning/learing_rate/success_rate.jpg" width="320"/><img src="results/Q_Learning/tuning/learing_rate/mse.jpg" width="320"/>
 </div>
 
-        
-      
+#### Tuning Discount Rate in 10✖10 map
+<div align=center>
+<img src="results/Q_Learning/tuning/discount_rate/average_award.jpg" width="320" ><img src="results/Q_Learning/tuning/discount_rate/success_rate.jpg" width="320"/><img src="results/Q_Learning/tuning/discount_rate/mse.jpg" width="320"/>
+</div>
 
+#### Tuning Epsilon in 4✖4 map
+<div align=center>
+<img src="results/Q_Learning/tuning/epsilon/average_award.jpg" width="320" ><img src="results/Q_Learning/tuning/epsilon/success_rate.jpg" width="320"/><img src="results/Q_Learning/tuning/epsilon/mse.jpg" width="320"/>
+</div>
+        
+### Tuning SARSA
+
+#### Tuning Learning Rate in 10✖10 map
+<div align=center>
+<img src="results/SARSA/tuning/learning_rate/average_award.jpg" width="320" ><img src="results/SARSA/tuning/learning_rate/success_rate.jpg" width="320"/><img src="results/SARSA/tuning/learning_rate/mse.jpg" width="320"/>
+</div>
+
+#### Tuning Discount Rate in 10✖10 map
+<div align=center>
+<img src="results/SARSA/tuning/discount_rate/average_award.jpg" width="320" ><img src="results/SARSA/tuning/discount_rate/success_rate.jpg" width="320"/><img src="results/SARSA/tuning/discount_rate/mse.jpg" width="320"/>
+</div>
+
+#### Tuning Epsilon in 10✖10 map
+<div align=center>
+<img src="results/SARSA/tuning/epsilon/average_award.jpg" width="320" ><img src="results/SARSA/tuning/epsilon/success_rate.jpg" width="320"/><img src="results/SARSA/tuning/epsilon/mse.jpg" width="320"/>
+</div>
 
 
 
