@@ -83,7 +83,8 @@ For *discount rate*, according to the results, the optimal one could be **0.8**,
 </div>
 
 #### Tuning Epsilon in 4✖4 map
-For *epsilon*, in large scale map, a large epsilon will lead the Q Learning fail frequently. According to the results, the optimal epsilon value could be **0.1**, as highest average rewards, highest success rate, relative early success it achieved.
+For *epsilon*, in large scale map, a large epsilon will lead the Q Learning fail frequently. According to the results, the optimal epsilon value could be **0.1**, as highest average rewards, highest success rate, relative early success it achieved. In general, **Q Learning heavily depends on the epsilon**, a small epison value with **0.1** seems to be the 
+optimal choice among all epsilon values.
 
 <div align=center>
 <img src="results/Q_Learning/tuning/epsilon/average_award.jpg" width="280" ><img src="results/Q_Learning/tuning/epsilon/success_rate.jpg" width="280"/><img src="results/Q_Learning/tuning/epsilon/mse.jpg" width="280"/>
