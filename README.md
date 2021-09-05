@@ -1,4 +1,10 @@
 # ME5406_FrozenLake_FHL
+![maven](https://img.shields.io/badge/FanHaolin-Frozenlak-blue)(https://github.com/FHL1998/ME5406_FrozenLake_FHL)
+
+![maven](https://img.shields.io/badge/NUS-ME5406-important)
+![maven](https://img.shields.io/badge/RL-Q%20Learning-lightgrey)
+![maven](https://img.shields.io/badge/RL-SARSA-green)
+![maven](https://img.shields.io/badge/RL-Monte%20Carlo-blueviolet)
 
 ## Project Description
 > The objective of this project is to use model-free RL techniques to implement the **Frozen Lake Problem** and its extensions. 
