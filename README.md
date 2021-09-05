@@ -60,17 +60,69 @@ if you want to use GUI, you must modify the code in `Q_learning.py`, `SARSA.py`,
  ## Project Execution
  - **First**, you must change the TASK and OVERALL_TASK manually in `Parameters.py`
  - **Second**, run the entire project using the code:
+ 
     ```python
        python run.py
     ```
 ## Results Demonstration
-Here, some of the results will be illustrated below, especially for `OVERALL_TASK = 'Tuning Q Learning'` and `OVERALL_TASK = 'Tuning SARSA'`. The overall results can be found in `results`. For the interpretation you can refer to the **Report**.
-## Tuning Q Learning
+Here, some of the results will be illustrated below, especially for `OVERALL_TASK = 'Tuning Q Learning'` and `OVERALL_TASK = 'Tuning SARSA'`. The overall results can be found in `results`. For the interpretation you can refer to the **Report** and `results`.
+### Tuning Q Learning
 
+#### Tuning Learning Rate in 10✖10 map
+For *learning rate*, according to the results, the optimal one could be **0.1**, as higher average rewards, higher success rate, relative fast convergence(judged by MSE value) it achieved.
+
+<div align=center>
+<img src="results/Q_Learning/tuning/learing_rate/average_award.jpg" width="300" ><img src="results/Q_Learning/tuning/learing_rate/success_rate.jpg" width="300"/><img src="results/Q_Learning/tuning/learing_rate/mse.jpg" width="300"/>
+</div>
+
+#### Tuning Discount Rate in 10✖10 map
+For *discount rate*, according to the results, the optimal one could be **0.8**, as higher average rewards, higher success rate, relative early success episode it achieved.
+
+<div align=center>
+<img src="results/Q_Learning/tuning/discount_rate/average_award.jpg" width="300" ><img src="results/Q_Learning/tuning/discount_rate/success_rate.jpg" width="300"/><img src="results/Q_Learning/tuning/discount_rate/mse.jpg" width="300"/>
+</div>
+
+#### Tuning Epsilon in 4✖4 map
+For *epsilon*, in large_scale, a large epsilon will lead the Q Learning fail frequently. According to the results, the optimal epsilon value could be **0.1**, as highest average rewards, highest success rate, relative early success it achieved.
+
+<div align=center>
+<img src="results/Q_Learning/tuning/epsilon/average_award.jpg" width="300" ><img src="results/Q_Learning/tuning/epsilon/success_rate.jpg" width="300"/><img src="results/Q_Learning/tuning/epsilon/mse.jpg" width="300"/>
+</div>
         
-      
+### Tuning SARSA
+
+#### Tuning Learning Rate in 10✖10 map
+For *learning rate*, according to the results, the optimal one could be **0.05**, as higher average rewards, higher success rate, relative fast convergence(judged by MSE value) it achieved.
+
+<div align=center>
+<img src="results/SARSA/tuning/learning_rate/average_award.jpg" width="300" ><img src="results/SARSA/tuning/learning_rate/success_rate.jpg" width="300"/><img src="results/SARSA/tuning/learning_rate/mse.jpg" width="300"/>
+</div>
+
+#### Tuning Discount Rate in 10✖10 map
+<div align=center>
+<img src="results/SARSA/tuning/discount_rate/average_award.jpg" width="300" ><img src="results/SARSA/tuning/discount_rate/success_rate.jpg" width="300"/><img src="results/SARSA/tuning/discount_rate/mse.jpg" width="300"/>
+</div>
+
+#### Tuning Epsilon in 10✖10 map
+<div align=center>
+<img src="results/SARSA/tuning/epsilon/average_award.jpg" width="300" ><img src="results/SARSA/tuning/epsilon/success_rate.jpg" width="300"/><img src="results/SARSA/tuning/epsilon/mse.jpg" width="300"/>
+</div>
 
 
+## GUI Implementation Result
+The resluts achieved by using Q Learning in 10✖10 map is illustrated as below:
+<div align=center>
+   <img src="results/Run_All/Q_Learning.gif" width="300" >
+</div>
 
+The resluts achieved by using SARSA in 10✖10 map is illustrated as below:
+<div align=center>
+   <img src="results/Run_All/SARSA.gif" width="300"/>
+</div>
 
+## Project Iteration & Acknowledgement
+The frozen lake problem is simple, yet it is extremely useful in understanding Reinforcement Learning's essential concept. This is an meaningful project, and I gain some assistance like GUI implementation(Tkinter) from [Morvan Zhou](https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow).
 
+In addition to completing the project1, I also experimented with another GUI, which is implemented using [**web app**](https://share.streamlit.io/fanielts8/frozen_lake_web/main/app.py).
+
+Finally, I'd want to express my heartfelt gratitude to Professor Peter for teaching me approaches and abilities in ME5406. Your collection notes are informative, vivid, concise and clear, particularly the practical problem of the cliff walking, which helps me grasp the difference and link between SARSA and Q Learning, as well as the idea of DRL.
