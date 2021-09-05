@@ -83,7 +83,7 @@ For *discount rate*, according to the results, the optimal one could be **0.8**,
 </div>
 
 #### Tuning Epsilon in 4✖4 map
-For *epsilon*, in large_scale, a large epsilon will lead the Q Learning fail frequently. According to the results, the optimal epsilon value could be **0.1**, as highest average rewards, highest success rate, relative early success it achieved.
+For *epsilon*, in large scale map, a large epsilon will lead the Q Learning fail frequently. According to the results, the optimal epsilon value could be **0.1**, as highest average rewards, highest success rate, relative early success it achieved.
 
 <div align=center>
 <img src="results/Q_Learning/tuning/epsilon/average_award.jpg" width="280" ><img src="results/Q_Learning/tuning/epsilon/success_rate.jpg" width="280"/><img src="results/Q_Learning/tuning/epsilon/mse.jpg" width="280"/>
@@ -99,11 +99,15 @@ For *learning rate*, according to the results, the optimal one could be **0.05**
 </div>
 
 #### Tuning Discount Rate in 10✖10 map
+For *discount rate*, although SARSA achieved best performance at **1.0**, it seems unrealistic in practical scenario, thus it is usually selected about **0.9**.
+
 <div align=center>
 <img src="results/SARSA/tuning/discount_rate/average_award.jpg" width="280" ><img src="results/SARSA/tuning/discount_rate/success_rate.jpg" width="280"/><img src="results/SARSA/tuning/discount_rate/mse.jpg" width="280"/>
 </div>
 
 #### Tuning Epsilon in 10✖10 map
+For *epsilon*, according to the results, the optimal epsilon value could be **0.1**, as highest average rewards, highest success rate, relative early success it achieved.
+
 <div align=center>
 <img src="results/SARSA/tuning/epsilon/average_award.jpg" width="280" ><img src="results/SARSA/tuning/epsilon/success_rate.jpg" width="280"/><img src="results/SARSA/tuning/epsilon/mse.jpg" width="280"/>
 </div>
