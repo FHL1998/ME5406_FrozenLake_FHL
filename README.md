@@ -53,7 +53,7 @@ The visualization map can be illustrated as :
    * Environment
         * `Environment.py`. This file contains the relative operations to build the frozen lake environment.
    * Tkinter GUI
-        * `GUI.py`. This file contains the canvas settings, items representation and etc.
+        * `GUI.py`. This file is used for Tkinter and contains the canvas settings, items representation and etc.
  
  ## Project Execution ![maven](https://img.shields.io/badge/Project-Execution-important)
  > For the project execution, the prior preparation is the modification of parameters in `utils/Parameters.py`
