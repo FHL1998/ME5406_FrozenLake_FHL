@@ -23,12 +23,6 @@ The visualization map can be illustrated as :
 <img src="map/map_4x4.png" width="200" ><img src="map/map_10x10.png" width="200"/>
 </div>
 
-## GUI Implementation using Tkinter
-if you want to use GUI, you must modify the code in `Q_learning.py`, `SARSA.py`, `Monte_Carlo.py`:
-- uncomment the code `self.env.render()` 
-- uncomment the code `env = GUI()` and comment the code `env = Environment()`
-- uncomment the code `env.mainloop()`
-
 ## Project Structure
 * ME5406 Project1
     * images. This folder includes the images to be used in building the GUI
@@ -61,15 +55,24 @@ if you want to use GUI, you must modify the code in `Q_learning.py`, `SARSA.py`,
    * Tkinter GUI
         * `GUI.py`. This file contains the canvas settings, items representation and etc.
  
- ## Project Execution
- - **First**, modify the **MAP_NAME**, **MAP_SIZE** if you want to change the size of the grid world.
- - **Second**, modify the hyper-parameters **NUM_STEPS**, **NUM_EPISODES**, **LEARNING_RATE**, **GAMMA**, and **EPSILON** to adjust the maximum steps restriction in Monte Carlo method, the training episode number, the learning rate, the discount rate, and the epsilon greedy schedule.       
- - **Third**, you must change the TASK and OVERALL_TASK manually in `Parameters.py`
+ ## Project Execution ![maven](https://img.shields.io/badge/Project-Execution-important)
+ > For the project execution, the prior preparation is the modification of parameters in `utils/Parameters.py`
+ - **First**, modify the **MAP_NAME**, **MAP_SIZE** if you want to change the size of the grid world. The options are listed after the code.
+ - **Second**, modify the hyper-parameters **NUM_STEPS**, **NUM_EPISODES**, **LEARNING_RATE**, **GAMMA**, and **EPSILON** if you want to adjust the maximum steps restriction in Monte Carlo method, the training episode number, the learning rate, the discount rate, and the epsilon greedy schedule during the training process.       
+ - **Third**, you must change the **TASK** and **OVERALL_TASK** manually in `Parameters.py` if you want to execute different tasks.
  - **Fourth**, run the entire project using the code:
  
     ```python
        python run.py
     ```
+    
+## GUI Implementation using Tkinter ![maven](https://img.shields.io/badge/GUI-Usage-important)
+if you want to use GUI, you must modify the code in `Q_learning.py`, `SARSA.py`, `Monte_Carlo.py`, and then repeat the steps in **Project Execution**:
+- **First**, uncomment the code `self.env.render()` 
+- **Second**, uncomment the code `env = GUI()` and comment the code `env = Environment()`
+- **Third**, uncomment the code `env.mainloop()`
+
+
 ## Hyper Parameters Tuning Results Demonstration
 Here, some of the results will be illustrated below, especially for `OVERALL_TASK = 'Tuning Q Learning'` and `OVERALL_TASK = 'Tuning SARSA'`. The overall results can be found in `results`. For the interpretation you can refer to the **Report** and `results`.
 For the detailed interpretation of the hyper parametes:
