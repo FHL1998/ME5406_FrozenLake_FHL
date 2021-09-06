@@ -4,8 +4,8 @@ from map.map_process import transfer_matrix_to_coordinate  # please refer to map
 
 '''The first place need to be changed if you want to execute the methods in different map size'''
 # Environment parameters
-MAP_NAME = 'map/map_10x10.txt'  # MAP_NAME could be selected within 'map/map_10x10.txt' and 'map/map_4x4.txt'
-MAP_SIZE = '10x10'  # MAP_SIZE used in plot, should in line with MAP_NAME, has options of '10x10' and '4x4'
+MAP_NAME = 'map/map_4x4.txt'  # MAP_NAME could be selected within 'map/map_10x10.txt' and 'map/map_4x4.txt'
+MAP_SIZE = '4x4'  # MAP_SIZE used in plot, should in line with MAP_NAME, has options of '10x10' and '4x4'
 
 
 '''The second place need to be changed if you want to execute the methods with different hyper-parameters'''
@@ -15,7 +15,7 @@ MAP_SIZE = '10x10'  # MAP_SIZE used in plot, should in line with MAP_NAME, has o
 NUM_STEPS = 150
 
 # NUM_EPISODES is the episodes that involved in training process
-NUM_EPISODES = 3000
+NUM_EPISODES = 1000
 
 # LEARNING_RATE is the hyper-parameter used in Q-Learning, SARSA and SARSA(lambda), default to be 0.1
 LEARNING_RATE = 0.1
@@ -30,13 +30,9 @@ EPSILON = 0.1
 LAMBDA = 0.9
 
 
-''' The third place you should modify if you want to execute different tasks. Change the OVERALL_TASK first and if the 
-OVERALL_TASK is Tuning Q Learning or Tuning SARSA, you can change the specific tuning tasks in TASK.
-The default OVERALL_TASK is Run Three Methods.'''
-
-# OVERALL_TASK_LIST is the list involved in the 3 tasks, and TASK is the current task
-OVERALL_TASK_LIST = ['Run Three Methods', 'Compare Three Methods', 'Tuning Q Learning', 'Tuning SARSA']
-OVERALL_TASK = 'Run Three Methods'
+''' This place you should modify if you want to execute different tuning tasks in each folder to debug. 
+Otherwise, it is useless. you can change the specific tuning tasks in TUNING_TASK_LIST.
+The default TUNING_TASK is Tuning Learning Rate.'''
 
 # TUNING_TASK_LIST is the list involved in 3 subtasks for tuning when the OVERALL_TASK is
 # 'Tuning Q Learning' or 'Tuning SARSA', and TASK is the current tuning task.
