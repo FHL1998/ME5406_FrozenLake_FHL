@@ -81,6 +81,7 @@ class Q_Learning(object):
         self.check_state_validation(next_state)
 
         # Calculate the q target value(estimated target value) according to update rules
+        # Specifically, the argmax operation is used in Q learning to get the optimal action value at observation state
         TD_target = reward + self.gamma * self.q_table.loc[next_state, :].max()
         TD_error = TD_target - self.q_table.loc[state, action]
 
@@ -224,10 +225,10 @@ class Q_Learning(object):
     # Printing the Q-table with states
     def print_q_table(self):
         e = self.env.final_states()
-        # Comparing the indexes with coordinates and writing in the new Q-table values
+        # comparing the indexes with coordinates and writing into the new Q-table values
         for i in range(len(e)):
             state = str(e[i])
-            # Going through all indexes and checking
+            # going through all indexes and checking
             for j in range(len(self.q_table.index)):
                 if self.q_table.index[j] == state:
                     self.q_table_final.loc[state, :] = self.q_table.loc[state, :]

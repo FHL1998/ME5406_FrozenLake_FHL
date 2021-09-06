@@ -60,7 +60,9 @@ class SARSA(object):
 
     def learn(self, current_state, current_action, reward, next_state, next_action):
         """The update manner of SARSA to update action value at each state based on the pair(st,at,rt,st+1, at+1)
-                Specifically, the update formula is: Q(s,a) = Q(s,a) + alpha * (r + gamma * Q(s',a') - Q(s,a))
+        Specifically, the update policy is: Q(s,a) = Q(s,a) + alpha * (r + gamma * Q(s',a') - Q(s,a))
+        Unlike Q Learning, the action SARSA select at next observation state based on epsilon-greedy rather than greedy,
+        Which means there still exists possibility for SARSA to random choose the action even achieve optimal policy.
 
         Args:
             current_state (int): The observation state of the agent.
@@ -75,7 +77,7 @@ class SARSA(object):
         TD_target = reward + self.gamma * self.Q_Table[next_state][next_action]
         TD_Error = TD_target - Q_Predict
         self.Q_Table[current_state][current_action] += self.learning_rate * TD_Error
-        return self.Q_Table[current_state][current_action]  # return 给定状态和动作下的Q value
+        return self.Q_Table[current_state][current_action]  # return Q value in a given state and action
 
     def train(self, num_epoch):
         """The main function to realize the SARSA. Update the Q table and get the relevant performance.
