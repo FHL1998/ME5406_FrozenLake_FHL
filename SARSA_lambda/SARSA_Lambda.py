@@ -212,4 +212,4 @@ if __name__ == "__main__":
     env = Environment()
     SARSA_Lambda = SARSA_Lambda(env, learning_rate=LEARNING_RATE, gamma=GAMMA, epsilon=EPSILON, lambda_=LAMBDA)  # Create a q learning agent
     q_table, fail, success, optimal, Episode_Time, Q_Value_Diff, min_episode, q_convergence_list, steps, SUCCESS_RATE, overall_success_rate, Reward_List = SARSA_Lambda.train(num_episode=NUM_EPISODES)
-    plot_final_results(METHOD_NAME, METHOD_PATH, SMOOTH, fail, success, optimal, Episode_Time, Q_Value_Diff, min_episode, q_convergence_list,steps, SUCCESS_RATE, overall_success_rate, Reward_List)
+    plot_final_results(METHOD_NAME, METHOD_PATH, SMOOTH, fail, success, optimal, Episode_Time, Q_Value_Diff, min_episode, q_convergence_list, steps, SUCCESS_RATE, overall_success_rate, Reward_List)
