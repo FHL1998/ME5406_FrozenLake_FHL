@@ -35,6 +35,7 @@ class SARSA_Lambda:
             # In each state, initialize the Q value of each action to 0
             q_table_new_row = pd.Series([0] * len(self.actions), index=self.q_table.columns, name=state)
             self.q_table = self.q_table.append(q_table_new_row)
+            # need to update eligibility_trace
             self.eligibility_trace = self.eligibility_trace.append(q_table_new_row)
 
     def epsilon_greedy_policy(self, current_state):
@@ -84,7 +85,8 @@ class SARSA_Lambda:
         q_target = reward + self.gamma * self.q_table.loc[next_state, next_action]  # next state is not terminal
         TD_error = q_target - q_predict
 
-        # increase trace amount for visited state-action pair
+        # increase trace amount for visited state-action pair,
+        # For the experienced state-action, we add 1 to prove that it is an indispensable part of the reward.
         self.eligibility_trace.loc[state, action] += 1
 
         # Updating action value in Q-table based on SARSA(lambda)
