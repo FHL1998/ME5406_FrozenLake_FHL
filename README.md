@@ -150,7 +150,7 @@ For *epsilon*, according to the results, the optimal epsilon value could be **0.
    
 * For Web-App:
    <div align=center>
-      <img src="results/web_app.png" width="750"/>
+      <img src="results/web_app.png" width="700"/>
    </div>
 
 
