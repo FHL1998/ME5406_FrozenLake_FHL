@@ -55,8 +55,6 @@ if you want to use GUI, you must modify the code in `Q_learning.py`, `SARSA.py`,
     * utils
         * `Parameters.py`. 
           * This file include all the important parameters and setting in the environment building process, such as grid size, pixels , image of agent in Tkinter, etc.
-          * Modify the **MAP_NAME**, **MAP_SIZE** if you want to change the size of the grid world.
-          * Modify the hyper-parameters **NUM_STEPS**, **NUM_EPISODES**, **LEARNING_RATE**, **GAMMA**, and **EPSILON** to adjust the maximum steps restriction in Monte Carlo method, the training episode number, the learning rate, the discount rate, and the epsilon greedy.
         * `Utils.py`. This include some functions which utilized to judge the convergence, plot figures like heat map, box plot, average rewards, time consuming, stpes and etc.
    * Environment
         * `Environment.py`. This file contains the relative operations to build the frozen lake environment.
@@ -64,8 +62,10 @@ if you want to use GUI, you must modify the code in `Q_learning.py`, `SARSA.py`,
         * `GUI.py`. This file contains the canvas settings, items representation and etc.
  
  ## Project Execution
- - **First**, you must change the TASK and OVERALL_TASK manually in `Parameters.py`
- - **Second**, run the entire project using the code:
+ - **First**, modify the **MAP_NAME**, **MAP_SIZE** if you want to change the size of the grid world.
+ - **Second**, modify the hyper-parameters **NUM_STEPS**, **NUM_EPISODES**, **LEARNING_RATE**, **GAMMA**, and **EPSILON** to adjust the maximum steps restriction in Monte Carlo method, the training episode number, the learning rate, the discount rate, and the epsilon greedy schedule.       
+ - **Third**, you must change the TASK and OVERALL_TASK manually in `Parameters.py`
+ - **Fourth**, run the entire project using the code:
  
     ```python
        python run.py
