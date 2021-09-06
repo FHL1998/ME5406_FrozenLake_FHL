@@ -147,8 +147,11 @@ For *epsilon*, according to the results, the optimal epsilon value could be **0.
    <div align=center>
       <img src="results/Run_All/SARSA.gif" width="300"/>
    </div>
-* For Web-App:
    
+* For Web-App:
+   <div align=center>
+      <img src="results/web_app.png" width="750"/>
+   </div>
 
 
 ## Project Iteration & Acknowledgement
