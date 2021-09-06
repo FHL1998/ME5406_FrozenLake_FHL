@@ -81,7 +81,8 @@ class SARSA(object):
 
     def train(self, num_epoch):
         """The main function to realize the SARSA. Update the Q table and get the relevant performance.
-
+        Args:
+            num_epoch (int): The total episodes number.
         Returns:
             Q_table (dataframe):  The complete q table.
             fail (dict): The dict that stores the episode as key, and length of steps in an fail episode as value.
@@ -208,7 +209,8 @@ class SARSA(object):
         # print('Q TABLE', self.Q_Table) # uncomment this code if you want inspect the q table to debug
         self.env.final()
 
-        # calculate the overall success rate based on the success number and fail number
+        # calculate the overall success rate based on the success number and fail number with two decimal places
+        # specifically, it equals to success number/(success number+fail number)
         overall_success_rate = round(success_count / (success_count + fail_count), 2)
         return self.Q_Table, fail, success, optimal, Episode_Time, Q_Value_Diff, min_episode, q_convergence_list, \
                steps, SUCCESS_RATE, overall_success_rate, Reward_List

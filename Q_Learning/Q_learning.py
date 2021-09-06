@@ -216,7 +216,8 @@ class Q_Learning(object):
         # print('Q TABLE', self.q_table) # uncomment this code if you want inspect the q table to debug
         self.env.final()
 
-        # calculate the overall success rate based on the success number and fail number
+        # calculate the overall success rate based on the success number and fail number with two decimal places
+        # specifically, it equals to success number/(success number+fail number)
         overall_success_rate = round(success_count / (success_count + fail_count), 2)
         self.print_q_table()
         return self.q_table, fail, success, optimal, Episode_Time, Q_Value_Diff, min_episode, q_convergence_list, \

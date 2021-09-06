@@ -88,6 +88,8 @@ class SARSA_Lambda:
         self.eligibility_trace.loc[state, action] += 1
 
         # Updating action value in Q-table based on SARSA(lambda)
+        # Sarsa (Lambda) has an additional eligibility_trace table, so there is a record of the exploration trajectory,
+        # and this trajectory has a positive or negative impact on the value of the Q table.
         self.q_table += self.learning_rate * TD_error * self.eligibility_trace
 
         # The value of eligibility_trace decays with time.
@@ -193,12 +195,13 @@ class SARSA_Lambda:
                     Reward_List += [rewards / (i + 1)]
                     break
             print('episode:{}'.format(i))
-        overall_success_rate = round(success_count / (success_count + fail_count), 2)
-        # Showing the final route
-        # self.env.final()
 
-        # Showing the Q-table with values for each action
-        return self.q_table, fail, success, optimal, Episode_Time, Q_Value_Diff, min_episode, q_convergence_list, steps, SUCCESS_RATE, overall_success_rate, Reward_List
+        # calculate the overall success rate based on the success number and fail number with two decimal places
+        # specifically, it equals to success number/(success number+fail number)
+        overall_success_rate = round(success_count / (success_count + fail_count), 2)
+
+        return self.q_table, fail, success, optimal, Episode_Time, Q_Value_Diff, min_episode, q_convergence_list, \
+               steps, SUCCESS_RATE, overall_success_rate, Reward_List
 
 
 if __name__ == "__main__":

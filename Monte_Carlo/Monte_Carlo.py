@@ -143,6 +143,9 @@ class Monte_Carlo(object):
             # break the loop if exceed the max step length, this is used as an optimization of Monte Carlo Method
             if self.step > NUM_STEPS:
                 break
+
+        # calculate the overall success rate based on the success number and fail number with two decimal places
+        # specifically, it equals to success number/(success number+fail number)
         self.overall_success_rate = round(self.success_count / (self.success_count + self.fail_count), 2)
         return state_list, action_list, reward_list
 
