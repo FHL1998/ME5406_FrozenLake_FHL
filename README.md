@@ -1,4 +1,10 @@
 # ME5406_FrozenLake_FHL
+![maven](https://img.shields.io/badge/FanHaolin-Frozenlak-blue)(https://github.com/FHL1998/ME5406_FrozenLake_FHL)
+
+![maven](https://img.shields.io/badge/NUS-ME5406-important)
+![maven](https://img.shields.io/badge/RL-Q%20Learning-lightgrey)
+![maven](https://img.shields.io/badge/RL-SARSA-green)
+![maven](https://img.shields.io/badge/RL-Monte%20Carlo-blueviolet)
 
 ## Project Description
 > The objective of this project is to use model-free RL techniques to implement the **Frozen Lake Problem** and its extensions. 
@@ -16,12 +22,6 @@ The visualization map can be illustrated as :
 <div align=center>
 <img src="map/map_4x4.png" width="200" ><img src="map/map_10x10.png" width="200"/>
 </div>
-
-## GUI Implementation using Tkinter
-if you want to use GUI, you must modify the code in `Q_learning.py`, `SARSA.py`, `Monte_Carlo.py`:
-- uncomment the code `self.env.render()` 
-- uncomment the code `env = GUI()` and comment the code `env = Environment()`
-- uncomment the code `env.mainloop()`
 
 ## Project Structure
 * ME5406 Project1
@@ -49,63 +49,82 @@ if you want to use GUI, you must modify the code in `Q_learning.py`, `SARSA.py`,
     * utils
         * `Parameters.py`. 
           * This file include all the important parameters and setting in the environment building process, such as grid size, pixels , image of agent in Tkinter, etc.
-          * Modify the **MAP_NAME**, **MAP_SIZE** if you want to change the size of the grid world.
-          * Modify the hyper-parameters **NUM_STEPS**, **NUM_EPISODES**, **LEARNING_RATE**, **GAMMA**, and **EPSILON** to adjust the maximum steps restriction in Monte Carlo method, the training episode number, the learning rate, the discount rate, and the epsilon greedy.
         * `Utils.py`. This include some functions which utilized to judge the convergence, plot figures like heat map, box plot, average rewards, time consuming, stpes and etc.
    * Environment
         * `Environment.py`. This file contains the relative operations to build the frozen lake environment.
    * Tkinter GUI
-        * `GUI.py`. This file contains the canvas settings, items representation and etc.
+        * `GUI.py`. This file is used for Tkinter and contains the canvas settings, items representation and etc.
  
- ## Project Execution
- - **First**, you must change the TASK and OVERALL_TASK manually in `Parameters.py`
- - **Second**, run the entire project using the code:
+ ## Project Execution ![maven](https://img.shields.io/badge/Project-Execution-important)
+ > For the project execution, the prior preparation is the modification of parameters in `utils/Parameters.py`
+ - **First**, modify the **MAP_NAME**, **MAP_SIZE** if you want to change the size of the grid world. The options are listed after the code.
+ - **Second**, modify the hyper-parameters **NUM_STEPS**, **NUM_EPISODES**, **LEARNING_RATE**, **GAMMA**, and **EPSILON** if you want to adjust the maximum steps restriction in Monte Carlo method, the training episode number, the learning rate, the discount rate, and the epsilon greedy schedule during the training process.       
+ - **Third**, you must change the **TASK** and **OVERALL_TASK** manually in `Parameters.py` if you want to execute different tasks.
+ - **Fourth**, run the entire project using the code:
  
     ```python
        python run.py
     ```
-## Results Demonstration
+    
+## GUI Implementation using Tkinter ![maven](https://img.shields.io/badge/GUI-Usage-important)
+if you want to use GUI, you must modify the code in `Q_learning.py`, `SARSA.py`, `Monte_Carlo.py`, and then repeat the steps in **Project Execution**:
+- **First**, uncomment the code `self.env.render()` 
+- **Second**, uncomment the code `env = GUI()` and comment the code `env = Environment()`
+- **Third**, uncomment the code `env.mainloop()`
+
+
+## Hyper Parameters Tuning Results Demonstration
 Here, some of the results will be illustrated below, especially for `OVERALL_TASK = 'Tuning Q Learning'` and `OVERALL_TASK = 'Tuning SARSA'`. The overall results can be found in `results`. For the interpretation you can refer to the **Report** and `results`.
+For the detailed interpretation of the hyper parametes:
+- **Learning Rate(alpha)**: alpha is a metric that compares the outcomes of previous learning to the results of present learning. If the alpha is set too low, the agent will only be interested in prior information.
+- **Discount Rate(gamma)**: gamma is the attenuation value for future returns, which determines the importance of future returns. A factor near to one will motivate the agent to work hard in order to reap long-term high benefits.
+- **Greedy Policy(epsilon)**: epsilon is used to balance the relationship between exploration and exploitation in epsilon-greedy policy.
+
 ### Tuning Q Learning
 
 #### Tuning Learning Rate in 10✖10 map
 For *learning rate*, according to the results, the optimal one could be **0.1**, as higher average rewards, higher success rate, relative fast convergence(judged by MSE value) it achieved.
 
 <div align=center>
-<img src="results/Q_Learning/tuning/learing_rate/average_award.jpg" width="300" ><img src="results/Q_Learning/tuning/learing_rate/success_rate.jpg" width="300"/><img src="results/Q_Learning/tuning/learing_rate/mse.jpg" width="300"/>
+<img src="results/Q_Learning/tuning/learing_rate/average_award.jpg" width="250" ><img src="results/Q_Learning/tuning/learing_rate/success_rate.jpg" width="250"/><img src="results/Q_Learning/tuning/learing_rate/mse.jpg" width="250"/>
 </div>
 
 #### Tuning Discount Rate in 10✖10 map
 For *discount rate*, according to the results, the optimal one could be **0.8**, as higher average rewards, higher success rate, relative early success episode it achieved.
 
 <div align=center>
-<img src="results/Q_Learning/tuning/discount_rate/average_award.jpg" width="300" ><img src="results/Q_Learning/tuning/discount_rate/success_rate.jpg" width="300"/><img src="results/Q_Learning/tuning/discount_rate/mse.jpg" width="300"/>
+<img src="results/Q_Learning/tuning/discount_rate/average_award.jpg" width="250" ><img src="results/Q_Learning/tuning/discount_rate/success_rate.jpg" width="250"/><img src="results/Q_Learning/tuning/discount_rate/mse.jpg" width="250"/>
 </div>
 
 #### Tuning Epsilon in 4✖4 map
-For *epsilon*, in large_scale, a large epsilon will lead the Q Learning fail frequently. According to the results, the optimal epsilon value could be **0.1**, as highest average rewards, highest success rate, relative early success it achieved.
+For *epsilon*, in large scale map, a large epsilon will lead the Q Learning fail frequently. According to the results, the optimal epsilon value could be **0.1**, as highest average rewards, highest success rate, relative early success it achieved. In general, **Q Learning heavily depends on the epsilon**, a small epison value with **0.1** seems to be the 
+optimal choice among all epsilon values.
 
 <div align=center>
-<img src="results/Q_Learning/tuning/epsilon/average_award.jpg" width="300" ><img src="results/Q_Learning/tuning/epsilon/success_rate.jpg" width="300"/><img src="results/Q_Learning/tuning/epsilon/mse.jpg" width="300"/>
+<img src="results/Q_Learning/tuning/epsilon/average_award.jpg" width="250" ><img src="results/Q_Learning/tuning/epsilon/success_rate.jpg" width="250"/><img src="results/Q_Learning/tuning/epsilon/mse.jpg" width="250"/>
 </div>
         
 ### Tuning SARSA
 
 #### Tuning Learning Rate in 10✖10 map
-For *learning rate*, according to the results, the optimal one could be **0.05**, as higher average rewards, higher success rate, relative fast convergence(judged by MSE value) it achieved.
+For *learning rate*, according to the results, the optimal one could be **0.05** or **0.01**, as higher average rewards, higher success rate, relative fast convergence(judged by MSE value) it achieved.
 
 <div align=center>
-<img src="results/SARSA/tuning/learning_rate/average_award.jpg" width="300" ><img src="results/SARSA/tuning/learning_rate/success_rate.jpg" width="300"/><img src="results/SARSA/tuning/learning_rate/mse.jpg" width="300"/>
+<img src="results/SARSA/tuning/learning_rate/average_award.jpg" width="250" ><img src="results/SARSA/tuning/learning_rate/success_rate.jpg" width="250"/><img src="results/SARSA/tuning/learning_rate/mse.jpg" width="250"/>
 </div>
 
 #### Tuning Discount Rate in 10✖10 map
+For *discount rate*, although SARSA achieved best performance at **1.0**, it seems unrealistic in practical scenario, thus it is usually selected about **0.9**.
+
 <div align=center>
-<img src="results/SARSA/tuning/discount_rate/average_award.jpg" width="300" ><img src="results/SARSA/tuning/discount_rate/success_rate.jpg" width="300"/><img src="results/SARSA/tuning/discount_rate/mse.jpg" width="300"/>
+<img src="results/SARSA/tuning/discount_rate/average_award.jpg" width="250" ><img src="results/SARSA/tuning/discount_rate/success_rate.jpg" width="250"/><img src="results/SARSA/tuning/discount_rate/mse.jpg" width="250"/>
 </div>
 
 #### Tuning Epsilon in 10✖10 map
+For *epsilon*, according to the results, the optimal epsilon value could be **0.1**, as highest average rewards, highest success rate, relative early success it achieved.
+
 <div align=center>
-<img src="results/SARSA/tuning/epsilon/average_award.jpg" width="300" ><img src="results/SARSA/tuning/epsilon/success_rate.jpg" width="300"/><img src="results/SARSA/tuning/epsilon/mse.jpg" width="300"/>
+<img src="results/SARSA/tuning/epsilon/average_award.jpg" width="250" ><img src="results/SARSA/tuning/epsilon/success_rate.jpg" width="250"/><img src="results/SARSA/tuning/epsilon/mse.jpg" width="250"/>
 </div>
 
 
@@ -125,4 +144,4 @@ The frozen lake problem is simple, yet it is extremely useful in understanding R
 
 In addition to completing the project1, I also experimented with another GUI, which is implemented using [**web app**](https://share.streamlit.io/fanielts8/frozen_lake_web/main/app.py).
 
-Finally, I'd want to express my heartfelt gratitude to Professor Peter for teaching me approaches and abilities in ME5406. Your collection notes are informative, vivid, concise and clear, particularly the practical problem of the cliff walking, which helps me grasp the difference and link between SARSA and Q Learning, as well as the idea of DRL.
+Finally, I'd want to express my heartfelt gratitude to [Professor CHEN Chao Yu, Peter](https://www.eng.nus.edu.sg/me/staff/chen-chao-yu-peter/) for teaching me approaches and abilities in ME5406. Your collection notes are informative, vivid, concise and clear, particularly the practical problem of the cliff walking, which helps me grasp the difference and link between SARSA and Q Learning, as well as the idea of DRL.
