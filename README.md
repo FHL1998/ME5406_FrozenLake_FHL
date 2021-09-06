@@ -28,7 +28,7 @@ The visualization map can be illustrated as :
  ### Requirements Install ![maven](https://img.shields.io/badge/Python-3.6-important) ![maven](https://img.shields.io/badge/Python-Requirements-important)
 The project based on the python version `Python 3.6`. For the requirements, a new virtual environmrnt is recommended. You should install the required packages in `requirements.txt` using:
 ```python
-   pip install requirements.txt
+   pip install -r requirements.txt
 ```
  
  ### Detailed Execution ![maven](https://img.shields.io/badge/Parameters-Modify-important) ![maven](https://img.shields.io/badge/Detailed-Execution-important)
