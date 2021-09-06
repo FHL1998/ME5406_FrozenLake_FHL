@@ -38,9 +38,10 @@ The project based on the python version `Python 3.6`. For the requirements, a ne
  - **Third**, you must change the **TASK** and **OVERALL_TASK** manually in `Parameters.py` if you want to execute different tasks.
  - **Fourth**, run the entire project using the code:
  
-    ```python
+   ```python
        python run.py
-    ```
+   ```
+   > Noted: The training process can be aborted by `Ctrl+C`.
     
 ## GUI Implementation using Tkinter and Web-App ![maven](https://img.shields.io/badge/GUI-Tkinter-success) ![maven](https://img.shields.io/badge/GUI-WebApp-yellow)
 * if you want to use GUI with Tkinter, you must modify the code in `Q_learning.py`, `SARSA.py`, `Monte_Carlo.py`, and then repeat the steps in **Project Execution**:
