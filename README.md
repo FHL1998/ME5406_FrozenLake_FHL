@@ -39,36 +39,38 @@ The project based on the python version `Python 3.6`. For the requirements, a ne
   
    - Run all the three methods separately.
    ```python
-       python run.py 'Run Three Methods' 'None'
+       python run.py 'ENV' 'Run Three Methods' 'None'
    ```
    
    - Run all the three methods together to compare the overall performance achieved by three methods.
    ```python
-       python run.py 'Compare Three Methods' 'None'
+       python run.py 'ENV' 'Compare Three Methods' 'None'
    ```
    
    - For the task of tuning for Q Leatning, execute sub tuning tasks, which are Tuning Learning Rate, Tuning Discount Rate, and Tuning Greedy Policy.
    ```python
-       python run.py 'Tuning Q Learning' 'Tuning Learning Rate'
-       python run.py 'Tuning Q Learning' 'Tuning Discount Rate'
-       python run.py 'Tuning Q Learning' 'Tuning Greedy Policy'
+       python run.py 'ENV' 'Tuning Q Learning' 'Tuning Learning Rate'
+       python run.py 'ENV' 'Tuning Q Learning' 'Tuning Discount Rate'
+       python run.py 'ENV' 'Tuning Q Learning' 'Tuning Greedy Policy'
    ```
    
    - For the task of tuning for SARSA, execute sub tuning tasks separately, which are Tuning Learning Rate, Tuning Discount Rate, and Tuning Greedy Policy.
    ```python
-       python run.py 'Tuning SARSA' 'Tuning Learning Rate'
-       python run.py 'Tuning SARSA' 'Tuning Discount Rate'
-       python run.py 'Tuning SARSA' 'Tuning Greedy Policy'
+       python run.py 'ENV' 'Tuning SARSA' 'Tuning Learning Rate'
+       python run.py 'ENV' 'Tuning SARSA' 'Tuning Discount Rate'
+       python run.py 'ENV' 'Tuning SARSA' 'Tuning Greedy Policy'
    ```
    
    > Noted: The training process can be aborted by `Ctrl+C`. In order to debug, you can utilize `python -m pdb run.py`.
     
 ## GUI Implementation using Tkinter and Web-App ![maven](https://img.shields.io/badge/GUI-Tkinter-success) ![maven](https://img.shields.io/badge/GUI-WebApp-yellow)
-* if you want to use GUI with Tkinter, you must modify the code in `Q_learning.py`, `SARSA.py`, `Monte_Carlo.py`, and then repeat the steps in **Project Execution**:
-   - **First**, uncomment the code `self.env.render()` 
-   - **Second**, uncomment the code `env = GUI()` and comment the code `env = Environment()`
-   - **Third**, uncomment the code `env.mainloop()`
-
+* if you want to use GUI with Tkinter, you must modify the code in `Q_learning.py`, `SARSA.py`, `Monte_Carlo.py`:
+   - **First**, uncomment the code `self.env.render()` in each algorithm.
+   - **Second**, uncomment the code `env.mainloop()` in `run.py` or in each algorithm if you want to debug.
+   - **Third**, repeat the steps in **Project Execution**, one simple usage is:
+     ```python
+     python run.py 'GUI' 'Compare Three Methods' 'None'
+     ```
 * if you want to use **web-app**, just click on the text [**web app**](https://share.streamlit.io/fanielts8/frozen_lake_web/main/app.py) and follow the instruction.
 
 ## Project Structure
