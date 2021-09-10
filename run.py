@@ -12,7 +12,12 @@ from utils.Utils import *
 
 if __name__ == '__main__':
     np.random.seed(1)
+    global env
     parser = argparse.ArgumentParser(description="Variables that need to be declared")
+
+    # Add the argument for the gui implementation
+    parser.add_argument('env', type=str, default='ENV',
+                        help='The environment of using GUI or ENV.')
 
     # Add the argument for the OVERALL_TASK, the options are in the OVERALL_TASK_LIST
     # OVERALL_TASK_LIST = ['Run Three Methods', 'Compare Three Methods', 'Tuning Q Learning', 'Tuning SARSA']
@@ -24,8 +29,10 @@ if __name__ == '__main__':
     parser.add_argument('tuning_task', type=str, default='Tuning Learning Rate',
                         help='The sub-task agent can perform when the overall task is Tuning.')
     args = parser.parse_args()
-    env = Environment()
-    # env = GUI()  # uncomment this if you want to use Tkinter GUI
+    if args.env == 'ENV':
+        env = Environment()
+    elif args.env == 'GUI':
+        env = GUI()
     Monte_Carlo = Monte_Carlo(env, epsilon=EPSILON, gamma=GAMMA)
     SARSA = SARSA(env, learning_rate=LEARNING_RATE, gamma=GAMMA, epsilon=EPSILON)
     Q_Learning = Q_Learning(env, learning_rate=LEARNING_RATE, gamma=GAMMA, epsilon=EPSILON)
