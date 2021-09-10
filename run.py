@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     # Add the argument for the gui implementation
     parser.add_argument('env', type=str, default='ENV',
-                        help='The environment of using GUI or ENV.')
+                        help='The environment of using normal ENV or GUI.')
 
     # Add the argument for the OVERALL_TASK, the options are in the OVERALL_TASK_LIST
     # OVERALL_TASK_LIST = ['Run Three Methods', 'Compare Three Methods', 'Tuning Q Learning', 'Tuning SARSA']
