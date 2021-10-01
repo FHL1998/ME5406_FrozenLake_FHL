@@ -28,7 +28,7 @@ The visualization map can be illustrated as :
  ### Virtual Environment Creation
  First, create the virtual environment using Anoconda and activate the created environment.
  ```python
-   conda create -n frozenlake python=3.6.8
+   conda create -n frozenlake python=3.6
    conda activate frozenlake
 ```
  ### Requirements Install ![maven](https://img.shields.io/badge/Python-3.6-important) ![maven](https://img.shields.io/badge/Python-Requirements-important)
