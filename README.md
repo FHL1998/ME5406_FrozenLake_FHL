@@ -176,7 +176,7 @@ For *epsilon*, according to the results, the optimal epsilon value could be **0.
 
 
 ## GUI Implementation Result
-* For Tkinter GUI:
+### Tkinter GUI:
 
    The resluts achieved by using Q Learning in 10✖10 map is illustrated as below:
    <div align=center>
@@ -188,7 +188,7 @@ For *epsilon*, according to the results, the optimal epsilon value could be **0.
       <img src="results/Run_All/SARSA.gif" width="300"/>
    </div>
    
-* For Web-App:
+### Web-App:
    <div align=center>
       <img src="results/web_app.png" width="700"/>
    </div>
