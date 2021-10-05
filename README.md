@@ -26,7 +26,8 @@ The visualization map can be illustrated as :
 ## Project Execution ![maven](https://img.shields.io/badge/Project-Execution-important)
  
  ### Virtual Environment Creation
- First, create the virtual environment using Anoconda and activate the created environment in Windows or Linux.
+ First, create the virtual environment using Anoconda and activate the created environment in Windows or Linux
+ >At present the codes are only debuged in Windows 10, thus Windows 10 is recommended under this case.
  In Windows 10:
  ```python
    conda create -n frozenlake python=3.6
