@@ -26,10 +26,16 @@ The visualization map can be illustrated as :
 ## Project Execution ![maven](https://img.shields.io/badge/Project-Execution-important)
  
  ### Virtual Environment Creation
- First, create the virtual environment using Anoconda and activate the created environment.
+ First, create the virtual environment using Anoconda and activate the created environment in Windows or Linux.
+ In Windows 10:
  ```python
    conda create -n frozenlake python=3.6
    conda activate frozenlake
+```
+In Ubuntu 18.04:
+```python
+   conda create -n frozenlake python=3.6
+   source activate frozenlake
 ```
  ### Requirements Install ![maven](https://img.shields.io/badge/Python-3.6-important) ![maven](https://img.shields.io/badge/Python-Requirements-important)
 The project based on the python version `Python 3.6.8`. For the requirements, a new virtual environmrnt is recommended. You should install the required packages in `requirements.txt` using:
