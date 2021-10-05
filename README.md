@@ -36,8 +36,8 @@ The visualization map can be illustrated as :
 ```
 In Ubuntu 18.04:
 ```python
-  conda create -n frozenlake python=3.6
-  source activate frozenlake
+  $ conda create -n frozenlake python=3.6
+  $ source activate frozenlake
 ```
  ### Requirements Install ![maven](https://img.shields.io/badge/Python-3.6-important) ![maven](https://img.shields.io/badge/Python-Requirements-important)
 The project based on the python version `Python 3.6.8`. For the requirements, a new virtual environmrnt is recommended. You should install the required packages in `requirements.txt` using:
